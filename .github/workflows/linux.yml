@@ -31,6 +31,11 @@ jobs:
         python3 -m pip install --pre beeware
     - name: Build
       run: |
-        briefcase create
-        briefcase build
-        briefcase package
+        briefcase create --no-docker
+        briefcase build --no-docker
+        briefcase package --no-docker
+    - name: Save Installer
+      uses: actions/upload-artifact@v1
+      with:
+        name: Hello-Installer
+        path: linux/Hello_World-0.0.1-x86_64.AppImage
