@@ -31,9 +31,9 @@ jobs:
         python -m pip install beeware
     - name: Build
       run: |
-        briefcase create --no-docker
-        briefcase build --no-docker
-        briefcase package --no-docker
+        briefcase create
+        briefcase build
+        briefcase package
     - name: Save Installer
       uses: actions/upload-artifact@v1
       with:
