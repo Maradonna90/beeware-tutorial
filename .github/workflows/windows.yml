@@ -38,4 +38,4 @@ jobs:
       uses: actions/upload-artifact@v1
       with:
         name: Hello-Installer-Win
-        path: windows/Hello_World-0.0.1-x86_64.AppImage
+        path: windows/Hello World-0.0.1-x86_64.msi
